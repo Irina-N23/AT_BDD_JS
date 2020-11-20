@@ -1,0 +1,45 @@
+{
+  "name": "at_bdd_js",
+  "version": "1.0.0",
+  "description": "A proctractor-cucumber BDD test automation framework",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "protractor ./test/config/protractor-config.js",
+    "remove-logs": "node ./test/utilities/cleanUp/logs-cleaner.js",
+    "remove-reports": "node ./test/utilities/cleanUp/reports-cleaner.js",
+    "pretest": "npm run remove-logs && npm run remove-reports",
+    "update": "webdriver-manager update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Irina-N23/AT_BDD_JS.git"
+  },
+  "keywords": [
+    "protractor-cucumber-framework",
+    "bdd",
+    "chai",
+    "javascript",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Irina-N23/AT_BDD_JS/issues"
+  },
+  "homepage": "https://github.com/Irina-N23/AT_BDD_JS#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.2.0",
+    "cucumber-pretty": "^6.0.0",
+    "fs-extra": "^9.0.1",
+    "protractor": "^7.0.0",
+    "protractor-cucumber-framework": "^6.2.1",
+    "winston": "^3.3.3",
+    "yargs": "^16.1.0"
+  },
+  "dependencies": {}
+}
