@@ -6,7 +6,7 @@ const {When, setDefaultTimeout} = require("cucumber");
 setDefaultTimeout(60 * 1000);
 
 
-When(/^I click on "([^"]*)"$/, async (elementName) => {
+When(/^I click on "([^"]*)"$/, async elementName => {
     const page = await pageFactory.getPage();
     const button = await page.getElement(elementName);
     await button.clickOn();

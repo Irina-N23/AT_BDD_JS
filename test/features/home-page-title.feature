@@ -10,11 +10,11 @@ Scenario: As a user I should have access to Evernote home page
 
 
 @common
-Scenario Outline: As a user I should have access to <Page Name> home page
+Scenario Outline: <Number> As a user I should have access to <Page Name> home page
     Given I open "<Page Name>" home page
     Then Page title should include text "<Expected Text>"
 
 Examples:
-    | Page Name | Expected Text                     |
-    | AngularJS | AngularJS                         |
-    | Evernote  | Organize Your Notes with Evernote |
+    | Number | Page Name | Expected Text                     |
+    | 1      | AngularJS | AngularJS                         |
+    | 2      | Evernote  | Organize Your Notes with Evernote |

@@ -6,12 +6,12 @@ const {When, setDefaultTimeout} = require("cucumber");
 setDefaultTimeout(60 * 1000);
 
 
-When(/^I open "([^"]*)" home page$/, async (pageName) => {
+When(/^I open "([^"]*)" home page$/, async pageName => {
     const chosenPage = await pageFactory.getPage(pageName);
     return chosenPage.openPage();
 });
 
-When(/^I'm on the AngularJS "([^"]*)" page$/, async (pageName) => {
+When(/^I'm on the AngularJS "([^"]*)" page$/, async pageName => {
     const foundPage = await pageFactory.getAngularJsPage(pageName);
     const currentUrl = await browser.getCurrentUrl();
     if (foundPage.URL !== currentUrl) {
